@@ -19,9 +19,9 @@ Construa um App para iOS com a API: https://newsapi.org
      <td>Filtro</td>
   </tr>
   <tr>
-    <td><img src="https://github.com/juniorobici/NewsAPI/blob/master/Imagens/Tela1.png" width=270 height=480></td>
-    <td><img src="https://github.com/juniorobici/NewsAPI/blob/master/Imagens/Tela2.png" width=270 height=480></td>
-    <td><img src="https://github.com/juniorobici/NewsAPI/blob/master/Imagens/Tela3.png" width=270 height=480></td>
+    <td><img src="https://github.com/juniorobici/NewsAPI/blob/main/Imagens/Tela1.png" width=270 height=480></td>
+    <td><img src="https://github.com/juniorobici/NewsAPI/blob/main/Imagens/Tela2.png" width=270 height=480></td>
+    <td><img src="https://github.com/juniorobici/NewsAPI/blob/main/Imagens/Tela3.png" width=270 height=480></td>
   </tr>
  </table>
 
