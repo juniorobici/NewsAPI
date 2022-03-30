@@ -29,7 +29,6 @@ class MainNewsInteractor: MainNewsBusinessLogic, MainNewsDataStore {
     var presenter: MainNewsPresentationLogic?
     var worker: MainNewsRemoteAccess
     var viewModel = News()
-    var numberOfRows: Int = 0
     var fetchMore: Bool = false
     var currentPage: Int = 1
     var totalResults: Int = 0
@@ -48,8 +47,8 @@ class MainNewsInteractor: MainNewsBusinessLogic, MainNewsDataStore {
     func fetchNews(category: NewsCategory, sortBy: NewsSortBy) {
         presenter?.presentLoader()
         self.fetchMore = true
-        worker.fetchNews(country: getDeviceCountry(), category: category.rawValue, pageSize: pageSize, page: currentPage, sortBy: sortBy.rawValue) { news in
-            self.handleResponse(news)
+        worker.fetchNews(country: getDeviceCountry(), category: category.rawValue, pageSize: pageSize, page: currentPage, sortBy: sortBy.rawValue) { [weak self] news in
+            self?.handleResponse(news)
         } onError: { error in
             self.handleError(error.description)
         }
@@ -82,7 +81,6 @@ class MainNewsInteractor: MainNewsBusinessLogic, MainNewsDataStore {
         self.totalResults = 0
         self.fetchMore = false
         self.currentPage = 1
-        //presenter?.presentNews(viewModel: self.viewModel)
     }
 
     // MARK: - Helpers

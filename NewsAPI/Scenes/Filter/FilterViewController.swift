@@ -63,13 +63,13 @@ public class FilterTableViewController: UITableViewController, FilterDisplayLogi
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        configureTableView()
+        loadData()
     }
     
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupView()
-        configureTableView()
-        loadData()
     }
     
     public override var preferredStatusBarStyle: UIStatusBarStyle {

@@ -92,12 +92,12 @@ public class MainNewsViewController: UIViewController, MainNewsDisplayLogic {
     public override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        loadData(category: selectedNewsCategory, sortBy: selectedNewsSortBy)
     }
     
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupView()
-        loadData(category: selectedNewsCategory, sortBy: selectedNewsSortBy)
     }
     
     public override var preferredStatusBarStyle: UIStatusBarStyle {

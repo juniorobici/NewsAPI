@@ -112,12 +112,12 @@ public class ArticleViewController: UIViewController, ArticleDisplayLogic {
     
     public override func viewDidLoad() {
         super.viewDidLoad()
+        loadData()
     }
     
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupView()
-        loadData()
     }
     
     public override var preferredStatusBarStyle: UIStatusBarStyle {
